@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+        <style>
+       
+        /* Body Style */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+           
+        }
+
+        /* Navbar Style */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color:#FFCC99
+
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff5722;
+        }
+
+        /* Category Container */
+        .category-container {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .food-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .food-item {
+            flex: 0 0 auto;
+            width: 250px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            position: relative;
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .food-item h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .food-item p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .addToCart {
+            background-color: #ff5722;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #e64a19;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>NoVz</h1>
+        <nav class="nav-links">
+            <a href="home_page.html">Home</a>
+            <a href="#about">About</a>
+            <a href="order-now.html">Order Now</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="cart.html" class="view-cart">View Cart</a>
+        </nav>
+    </header>
+
+    <!-- Order Now Page -->
+    <div class="category-container">
+
+        <!-- Appetizers -->
+        <div class="category">
+            <h2>Appetizers</h2>
+            <div class="food-container">
+                <div class="food-item">
+                    <img src="food piics/Vegetable-Spring-Rolls-4.jpg" alt="Spring Rolls">
+                    <h3>Spring Rolls</h3>
+                    <p>Crispy, golden rolls filled with vegetables and chicken.</p>
+                    <span class="price">$12.99</span>
+                    <button class="addToCart" onclick="addToCart('Spring Rolls',12.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/Sweet-and-Spicy-Sriracha-Chicken-Wings-0-6.jpg" alt="Chicken Wings">
+                    <h3>Chicken Wings</h3>
+                    <p>Crispy fried wings tossed in a flavorful sauce</p>
+                    <span class="price">$10.49</span>
+                    <button class="addToCart" onclick="addToCart('Chicken Wings',10.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/Chicken-Skewers-with-Teriyaki-Sauce-683x1024.jpg" alt="Beef Skewers">
+                    <h3>Beef Skewers</h3>
+                    <p>Grilled tender beef cubes served on skewers with dipping sauce.</p>
+                    <span class="price">$15.29</span>
+                    <button class="addToCart" onclick="addToCart('Beef Skewers',15.29)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/crispy-shrimp-tempura.jpg" alt="Prawn Tempura">
+                    <h3>Prawn Tempura </h3>
+                    <p>Lightly battered and deep-fried prawns served with dipping sauce.</p>
+                    <span class="price">$14.49</span>
+                    <button class="addToCart" onclick="addToCart('Prawn Tempura ',14.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/grilled-calamari-rings-lemon.jpg" alt="Grilled Calamari">
+                    <h3>Grilled Calamari</h3>
+                    <p>Tender squid grilled to perfection with a light seasoning.</p>
+                    <span class="price">$18.99</span>
+                    <button class="addToCart" onclick="addToCart('Grilled Calamari',18.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meals -->
+        <div class="category">
+            <h2>Meals</h2>
+            <div class="food-container">
+                <div class="food-item">
+                    <img src="food piics/Grilled-BBQ-Chicken.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>Juicy grilled chicken served with vegetables.</p>
+                    <span class="price">$12.99</span>
+                    <button class="addToCart" onclick="addToCart('Grilled Chicken',12.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/IMG_3163-scaled.jpg" alt="Steak">
+                    <h3>Steak</h3>
+                    <p>Succulent steak with a side of mashed potatoes and mushroom gravy.</p>
+                    <span class="price">$24.49</span>
+                    <button class="addToCart" onclick="addToCart('Steak',24.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/Spaghetti-and-Meatballs.jpg" alt="Spaghetti">
+                    <h3>Spaghetti</h3>
+                    <p>Classic Italian spaghetti with marinara sauce and meatballs.</p>
+                    <span class="price">$19.99</span>
+                    <button class="addToCart" onclick="addToCart('Spaghetti',19.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/Pan-Seared-Salmon-with-Lemon-Butter-Sauce-5.jpg" alt="Salmon">
+                    <h3>Salmon</h3>
+                    <p>Pan-seared salmon with a lemon butter glaze.</p>
+                    <span class="price">$22.49</span>
+                    <button class="addToCart" onclick="addToCart('Salmon',22.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/chicken-alfredo-1-2.jpg" alt="Chicken Alfredo">
+                    <h3>Chicken Alfredo</h3>
+                    <p>Rich and creamy Alfredo sauce with chicken pasta.</p>
+                    <span class="price">$18.99</span>
+                    <button class="addToCart" onclick="addToCart('Chicken Alfredo',18.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vegetarian -->
+        <div class="category">
+            <h2>Vegetarian</h2>
+            <div class="food-container">
+                <div class="food-item">
+                    <img src ="food piics/veg-burgers-I-howsweeteats.com-15.jpg"alt="Veggie Burger">
+                    <h3>Veggie Burger</h3>
+                    <p>Plant-based burger served with fresh vegetables.</p>
+                    <span class="price">$15.49</span>
+                    <button class="addToCart" onclick="addToCart('Veggie Burger',15.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/vegetarian-pizza.jpg" alt="Veggie Pizza">
+                    <h3>Veggie Pizza</h3>
+                    <p>Pizza topped with fresh veggies and cheese.</p>
+                    <span class="price">$16.99</span>
+                    <button class="addToCart" onclick="addToCart('Veggie Pizza',16.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/vegetable_stir_fry.jpg" alt="Vegetable Stir-fry">
+                    <h3>Vegetable Stir-fry</h3>
+                    <p>Stir-fried vegetables in a savory sauce and finished off with seseme seeds.</p>
+                    <span class="price">$12.99</span>
+                    <button class="addToCart" onclick="addToCart('Vegetable Stir-fry',12.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/Falafel-5.jpg" alt="Falafel">
+                    <h3>Falafel</h3>
+                    <p>Chickpea patties served with pita and tahini.</p>
+                    <span class="price">$15.49</span>
+                    <button class="addToCart" onclick="addToCart('Falafel',15.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/air-fryer-potato-wedges-sq.jpg" alt="Potato Wedges">
+                    <h3>Potato Wedges</h3>
+                    <p>Crispy, seasoned potato wedges baked for perfection</p>
+                    <span class="price">$11.29</span>
+                    <button class="addToCart" onclick="addToCart('Potato Wedges',11.29)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dessert -->
+        <div class="category">
+            <h2>Dessert</h2>
+            <div class="food-container">
+                <div class="food-item">
+                    <img src="food piics/chocolate cake.jpg" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Decadent chocolate cake with chocolate fudge and strawberry.</p>
+                    <span class="price">$9.99</span>
+                    <button class="addToCart" onclick="addToCart('Chocolate Cake',9.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/plated-blueberry-cheesecake-hero.jpg" alt="Cheesecake">
+                    <h3>Blueberry Cheesecake</h3>
+                    <p>Creamy bluberry cheesecake with a graham cracker crust.</p>
+                    <span class="price">$12.99</span>
+                    <button class="addToCart" onclick="addToCart('Cheesecake',12.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/macarones.jpg" alt="Macarons">
+                    <h3>Macarons</h3>
+                    <p>Delicate almond meringe cookies, filled with strawberry buttercream.</p>
+                    <span class="price">$14.99</span>
+                    <button class="addToCart" onclick="addToCart('Macarons',14.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/chocolate-icecream-in-an-icecream-maker.jpg" alt="Ice Cream">
+                    <h3>Ice Cream</h3>
+                    <p>Chocolate ice cream with a strawberry on top.</p>
+                    <span class="price">$8.49</span>
+                    <button class="addToCart" onclick="addToCart('Ice Cream',8.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/Summer-Fruits-Tart-24.jpg" alt="Fruit Tart">
+                    <h3>Fruit Tart</h3>
+                    <p>A crisp pastry crust filled with creamy custard and topped with fresh fruits.</p>
+                    <span class="price">$10.49</span>
+                    <button class="addToCart" onclick="addToCart('Fruit Tart',10.49)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="category">
+            <h2>Drinks</h2>
+            <div class="food-container">
+                <div class="food-item">
+                    <img src="food piics/Lemonade-foodiecrush.com-9-1.jpg" alt="Lemonade">
+                    <h3>Lemonade</h3>
+                    <p>Freshly squeezed lemonade served chilled topped off with a mint leaf.</p>
+                    <span class="price">$5.99</span>
+                    <button class="addToCart" onclick="addToCart('Lemonade',5.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/lemon-iced-tea.jpg" alt="Iced Tea">
+                    <h3>Iced Tea</h3>
+                    <p>Refreshing iced tea served with lemon and topped off with a mint leaf.</p>
+                    <span class="price">$6.49</span>
+                    <button class="addToCart" onclick="addToCart('Iced Tea',6.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/frozen-blue-moscato-margaritas3-1653174015.jpg" alt="Blue Moscato">
+                    <h3>Blue Moscato</h3>
+                    <p>A sweet, fruity wine cocktail topped off with bluberries.</p>
+                    <span class="price">$8.99</span>
+                    <button class="addToCart" onclick="addToCart('Blue Moscato',8.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/KAP_9219-EYB-2-1.jpg" alt="Watermelon Drink">
+                    <h3>Watermelon Drink</h3>
+                    <p>Freshly squeezed watermelon juice with coconut water.</p>
+                    <span class="price">$5.49</span>
+                    <button class="addToCart" onclick="addToCart('Watermelon Drink',5.49)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="food piics/creamy-iced-chocolate-drink-813258.jpg" alt="Chocolate Milkshake">
+                    <h3>Chocolate Milkshake</h3>
+                    <p>Creamy Chocolate  milkshake made with whip cream on top.</p>
+                    <span class="price">$6.29</span>
+                    <button class="addToCart" onclick="addToCart('Chocolate  Milkshake',6.29)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script> 
+    let cart = JSON.parse(localStorage.getItem('cart')) || []; 
+    function addToCart(item, price) { 
+	     cart.push({ name: item, price: price });
+	     localStorage.setItem('cart', JSON.stringify(cart));
+	     alert(item + ' added to cart!'); 
+	}
+           </script>
+       </body>
+</html>

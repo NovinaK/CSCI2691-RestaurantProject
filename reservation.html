@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <style>
+        /* Body Style */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Style */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #FFCC99;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff5722;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type=submit] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #0056b3;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <header class="navbar">
+        <h1>NoVz</h1>
+        <nav class="nav-links">
+            <a href="home_page.html">Home</a>
+            <a href="#about">About</a>
+            <a href="order-now.html">Order Now</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="cart.html" class="view-cart">View Cart</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Make a Reservation</h1>
+        <form id="reservation-form" action="reservation.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="customer_name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <select id="guests" name="guests" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Guests</option>
+            </select>
+
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Enter any special requests"></textarea>
+
+            <input type="submit" value="Reserve">
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿/* Global styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Style */
+header {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header img {
+    width: 100px; /* Adjust logo size */
+}
+
+/* Navigation links */
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Content for the pages */
+.content {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Category and food items */
+.category {
+    margin-bottom: 20px;
+}
+
+.food-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.food-item p {
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+button {
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e87d3e;
+}

@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant NoVz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Body Style */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+           
+        }
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color:#FFCC99
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff5722;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            height: 700px;
+            background-image: url('food piics/h6.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #ff5722;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-text button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 1; /* Allows items to flexibly take up equal space */
+    overflow: hidden; /* Ensures no overflow of content */
+}
+
+.gallery img {
+    width: 100%; /* Makes the image take up the full width of its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Adds a slight zoom effect on hover */
+}
+
+        /* About Section */
+        .about-section {
+            padding: 50px 30px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .about-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>NoVz</h1>
+        <nav class="nav-links">
+           <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="order-now.html">Order Now</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="cart.html" class="view-cart">View Cart</a>        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Restaurant NoVz</h1>
+            <p>Best Restaurant in Colombo for authentic international dishes</p>
+            <button>Order Now</button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="food piics/pexels-janetrangdoan-1099680.jpg" alt="Lamp">
+    </div>
+    <div class="gallery-item">
+        <img src="food piics/pexels-robinstickel-70497.jpg" alt="Burger">
+    </div>
+    <div class="gallery-item">
+        <img src="food piics/h44.jpg" alt="Pizza">
+    </div>
+</div>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Welcome to NoVz, a dining destination where culinary artistry meets a warm, inviting atmosphere...</p>
+        <p>At NoVz, we specialize in modern fusion cuisine, blending flavors from around the globe...</p>
+        <p>We pride ourselves on sourcing the finest, freshest ingredients from local farmers...</p>
+        <p>Thank you for choosing NoVz. We look forward to serving you and creating an unforgettable experience.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 NoVz Restaurant. All rights reserved.</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </footer>
+</body>
+</html>
